@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+long aVeryBigSum(int n, long int ar[]) 
+{
+    long int sum=0;
+    for(int a=0;a<n;a++)
+        sum=sum+ar[a];
+return sum;
+}
+
+int main() 
+{
+    int n;
+    cin >> n;
+    long int ar[n];
+    for(int ar_i = 0; ar_i < n; ar_i++)
+    {
+       cin >> ar[ar_i];
+    }
+    long result = aVeryBigSum(n, ar);
+    cout << result << endl;
+    
+    return 0;
+}
