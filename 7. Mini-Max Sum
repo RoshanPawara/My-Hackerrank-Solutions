@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the miniMaxSum function below.
+void miniMaxSum(long long int arr[]) 
+{
+    long long int swap=0,sum=0;    
+
+for (int c = 0 ; c < 5 - 1; c++)
+  {
+    for (int d = 0 ; d < 5 - c - 1; d++)
+    {
+      if (arr[d] > arr[d+1])
+      {
+        swap       = arr[d];
+        arr[d]     = arr[d+1];
+        arr[d+1]   = swap;
+      }
+    }
+  }
+    
+for(int i = 0; i < 5;i++)
+{
+    sum += arr[i];
+}
+    
+//printf("%llu %llu", sum-arr[4], sum-arr[0]);    
+    cout<<sum-arr[4]<<" "<<sum-arr[0];    
+}
+
+int main()
+{
+    long long int num[5];
+    for(int i = 0; i < 5; i++)
+    {
+        cin>>num[i];
+    }
+    miniMaxSum(num);    
+}
