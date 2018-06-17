@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the birthdayCakeCandles function below.
+int birthdayCakeCandles(int ar[], int n) {
+    int numOfCandles = 1;
+    int i=0,j=1;
+    sort(ar, ar + n, greater<int>());
+    while(ar[i]==ar[j])
+    {
+        numOfCandles++;
+        i++;
+        j++;
+    }
+return numOfCandles;
+}
+
+int main()
+{
+    int numOfCandles;
+    cin>>numOfCandles;
+    int ar[numOfCandles];
+    for(int i = 0; i < numOfCandles; i++)
+        cin>>ar[i];
+    cout<<birthdayCakeCandles(ar,numOfCandles);
+return 0;
+}
