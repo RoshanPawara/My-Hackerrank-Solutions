@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void plusMinus(float arr[],int n) 
+{
+    float positive=0;
+    float negative=0;
+    float zero=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]<0)
+            negative++;
+        
+        else if(arr[i]>0)
+            positive++;
+        
+        else
+            zero++;
+    }
+    
+    cout<<positive/n<<endl;
+    cout<<negative/n<<endl;
+    cout<<zero/n;
+    
+}
+
+int main() 
+{
+    int n;
+    cin >> n;
+    float arr[n];
+    for(int arr_i = 0; arr_i < n; arr_i++)
+    {
+       cin >> arr[arr_i];
+    }
+    plusMinus(arr,n);
+    return 0;
+}
